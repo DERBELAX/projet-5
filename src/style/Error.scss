@@ -1,0 +1,39 @@
+.error-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8rem auto;
+    color: #FF6060;
+}
+
+.error-404{
+    font-weight: 700;
+    font-size: clamp(8rem, 18vw, 30rem); 
+}
+
+.error-message{
+    font-weight: 500;
+    font-size: clamp(1.3rem, 3vw, 4rem);
+    margin: 3rem 0;
+}
+
+.error-redirection {
+    font-size: clamp(1.3rem, 3vw, 4rem);
+    text-decoration: underline;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    
+  
+}
+
+@media (min-width:1024px) {
+
+    .error-message{
+        display: initial;
+    }
+    .error-redirection{
+        margin: 20rem 0;
+
+    }
+}

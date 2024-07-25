@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    @media (max-width: 768px) {
+      padding: 10px;
+    }
+    img {
+      width: 130px;
+      height: auto;
+      @media (max-width: 375px) {
+        height: 47px;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+      @media (max-width: 768px) {
+        gap: 10px;
+      }
+      li {
+        display: block;
+        a {  
+          text-decoration: none;
+          color: black;
+          @media (max-width: 768px) {
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+          &.active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
