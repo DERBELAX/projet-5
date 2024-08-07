@@ -1,6 +1,6 @@
 import React from "react";
-import starRed from "../assests/Red-Star.png";
-import starGrey from "../assests/Grey-Star.png"
+import starRed from "../assets/Red-Star.png";
+import starGrey from "../assets/Grey-Star.png"
 import "../style/Rating.scss"
 
 

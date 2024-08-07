@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import rightArrow from '../assests/arrow/arrow-right.png';
-import leftArrow from '../assests/arrow/arrow-left.png';
+import React, { useState, useEffect, useRef} from 'react';
+import rightArrow from '../assets/arrow/arrow-right.png';
+import leftArrow from '../assets/arrow/arrow-left.png';
 
 function Carrousel({ pictures }) {
   const [currentPicture, setCurrentPicture] = useState(0);
+  const carrouselRef = useRef();
 
-  function changePicture(direction) {
+  const changePicture = (direction) => {
     if (direction === 'next') {
       setCurrentPicture((prevPicture) => (prevPicture + 1) % pictures.length);
     } else if (direction === 'previous') {
@@ -13,7 +14,7 @@ function Carrousel({ pictures }) {
         prevPicture === 0 ? pictures.length - 1 : prevPicture - 1
       );
     }
-  }
+  };
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -31,37 +32,49 @@ function Carrousel({ pictures }) {
   }, [pictures.length]);
 
   return (
-    <div className="carrousel">
-      {pictures.length > 1 && (
+    <div className="carrousel-container" ref={carrouselRef}>
+      <div className="carrousel-title">
+        {pictures.length > 1 && (
+          <>
+            <button
+              aria-label="Image précédente"
+              onClick={() => changePicture('previous')}
+            >
+              <img
+                src={leftArrow}
+                className="arrow-img"
+                alt="Image précédente"
+              />
+            </button>
+            <button
+              aria-label="Image suivante"
+              onClick={() => changePicture('next')}
+            >
+              <img
+                src={rightArrow}
+                className="arrow-img"
+                alt="Image suivante"
+              />
+            </button>
+          </>
+        )}
+      </div>
+      <div className="carrousel-content">
         <img
-          className="previous-arrow arrow-img"
-          src={leftArrow}
-          alt="précédente"
-          onClick={() => changePicture('previous')}
-          aria-label="Image précédente"
+          src={pictures[currentPicture]}
+          alt={`Image ${currentPicture + 1} sur ${pictures.length}`}
+          className="carrousel-image"
         />
-      )}
-      {pictures.length > 1 && (
-        <img
-          className="next-arrow arrow-img"
-          src={rightArrow}
-          alt="suivante"
-          onClick={() => changePicture('next')}
-          aria-label="Image suivante"
-        />
-      )}
-      <img
-        src={pictures[currentPicture]}
-        alt={`image-${currentPicture + 1}`}
-        className="carrousel-image"
-      />
-      {pictures.length > 1 && (
-        <p className="numbers">
-          {currentPicture + 1}/{pictures.length}
-        </p>
-      )}
+        {pictures.length > 1 && (
+          <p className="numbers">
+            {currentPicture + 1}/{pictures.length}
+          </p>
+        )}
+      </div>
     </div>
   );
 }
 
 export default Carrousel;
+
+

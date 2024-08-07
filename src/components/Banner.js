@@ -1,22 +1,22 @@
 import React from "react";
-import imgHome from "../assests/img/mer.png";
-import imgAbout from "../assests/img/nature.png";
+import imgHome from "../assets/img/mer.png";
+import imgAbout from "../assets/img/nature.png";
 import "../style/Banner.scss"
 
 
 // Configuration des bannières pour différentes pages
 const configBanner = {
   home: {
-      className : 'banner-home', // Classe CSS pour la bannière d'accueil
-      imageSrc : imgHome, // Source de l'image pour la bannière d'accueil
-      imageAlt : 'vue sur mer', // Texte alternatif pour l'image
-      title: 'Chez vous, partout et ailleurs', // Titre de la bannière d'accueil
+      className : 'banner-home', 
+      imageSrc : imgHome, 
+      imageAlt : 'vue sur mer', 
+      title: 'Chez vous, partout et ailleurs', 
   },
   about: {
-      className : 'banner-about', // Classe CSS pour la bannière "À propos"
-      imageSrc : imgAbout, // Source de l'image pour la bannière "À propos"
-      imageAlt : 'vue sur montagne', // Texte alternatif pour l'image
-      title: null, // Pas de titre pour la bannière "À propos"
+      className : 'banner-about', 
+      imageSrc : imgAbout, 
+      imageAlt : 'vue sur montagne', 
+      title: null, 
   },
 }
 

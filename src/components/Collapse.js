@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Arrow from "../assests/arrow/arrow.svg";
+import Arrow from "../assets/arrow/arrow.svg";
 import "../style/Collapse.scss";
 
 function Collapse(props) {
