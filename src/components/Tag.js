@@ -1,15 +1,18 @@
 import React from "react";
 import "../style/Tag.scss";
 function Tag({tag}) {
+    console.log(tag)
     return(
         <div className="teg-ul">
             <ul>
-                {tag.map((tag, index) => (
-                    <li key={index}>{tag}</li>
-                ))}
+                
+                    <li>{tag}</li>
+                
 
-            </ul>
+            </ul> 
         </div>
+
     )
+    
 }
 export default Tag

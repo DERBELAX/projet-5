@@ -5,7 +5,7 @@ import Collapse from '../components/Collapse';
 
 function About() {
   return (
-    <main>
+    <>
         <Banner page = 'about' />
       <div className="about-container">
         < Collapse collapseTitle={'Fiabilité'}>
@@ -39,7 +39,7 @@ function About() {
           </p>
         </Collapse>
       </div>
-    </main>
+    </>
   )
 }
 

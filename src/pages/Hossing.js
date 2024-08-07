@@ -22,7 +22,7 @@ const Housing = () => {
         return <div>Loading...</div>; 
     }
     return (
-        <main>
+        <>
             <Carrousel pictures={data.pictures} />
 
             <div className="details">
@@ -71,7 +71,7 @@ const Housing = () => {
                     />
                 </div>
             </div>
-        </main>
+        </>
     );
 }
 

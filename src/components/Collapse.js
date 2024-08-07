@@ -12,7 +12,7 @@ function Collapse(props) {
     return (
       <div className="collapse-container">
         <div className="collapse-title">
-          <p>{props.collapseTitle}</p>
+          {props.collapseTitle}
           <button
             aria-expanded={open ? 'true' : 'false'}
             aria-controls="collapse-parent"
@@ -20,7 +20,7 @@ function Collapse(props) {
           >
             <img
               src={Arrow}
-              className={open ? 'arrow down' : 'arrow up'}
+              className= {`Arrow ${open ? 'down' : ''}`}
               alt="Ouvrir l'article"
               onClick={toggle}
             />

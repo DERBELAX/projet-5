@@ -7,7 +7,7 @@ const Card = () => {
       <div className='card'>
           {Housing.map((data)=>(
               <div key={data.id}>
-                  <Link to={`houssing/${data.id}`}>
+                  <Link to={`/houssing/${data.id}`}>
                       <div className="housing">
                           <img src={data.cover} alt={data.title} />
                           <h2>{data.title}</h2>
