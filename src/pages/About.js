@@ -1,34 +1,34 @@
 import React from 'react';
 import Banner from '../components/Banner';
+import Collapse from '../components/Collapse';
 
 
 function About() {
   return (
     <main>
-  
         <Banner page = 'about' />
       <div className="about-container">
-        <div collapseTitle={'Fiabilité'}>
+        < Collapse collapseTitle={'Fiabilité'}>
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont
             régulièrement vérifiées par nos équipes.
           </p>
-        </div>
-        <div collapseTitle={'Respect'}>
+        </Collapse>
+        <Collapse collapseTitle={'Respect'}>
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
             comportement discriminatoire ou de perturbation du voisinage
             entraînera une exclusion de notre plateforme.
           </p>
-        </div>
-        <div collapseTitle={'Service'}>
+        </Collapse>
+        <Collapse collapseTitle={'Service'}>
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa.
             Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
           </p>
-        </div>
-        <div collapseTitle={'Sécurité'}>
+        </Collapse>
+        <Collapse collapseTitle={'Sécurité'}>
           <p>
             La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
             pour les voyageurs, chaque logement correspond aux critères de
@@ -37,7 +37,7 @@ function About() {
             les standards sont bien respectés. Nous organisons également des
             ateliers sur la sécurité domestique pour nos hôtes.
           </p>
-        </div>
+        </Collapse>
       </div>
     </main>
   )
