@@ -5,7 +5,7 @@ import Rating from '../components/Rating';
 import Collapse from '../components/Collapse';
 import Carrousel from '../components/Carrousel';
 import HousingData from '../Data/logements.json';
-
+import "../style/Houssing.scss";
 
 const Housing = () => {
   const { id } = useParams();

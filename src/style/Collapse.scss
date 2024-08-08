@@ -1,17 +1,19 @@
-
 .collapse-title {
   background-color: #FF6060;
+  color: white;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34.22px;
   border-radius: 5px;
   display: flex;
-  margin: 30px;
+  margin: 0px 30px;
   padding: 10px 20px 10px 15px;
-  align-items: center;
   justify-content: space-between;
   @media (max-width: 769px) {
     padding: 5px 10px 5px 10px;
   }
   p {
-    color: #fff;
     font-size: 24px;
     line-height: 0px;
   }
@@ -33,18 +35,25 @@
   overflow: hidden;
   &.show {
     transition: height 0.6s ease;
-    p {
-      transform: translate(0px, 20px);
-    }
+   
   }
   &.hide {
     height: 0px;
     transition: height 0.6s ease;
   }
 }
+.button{
+  border: none;
+  background-color: #FF6060;
+}
 .collapse-content {
+  display: flex;
   background-color: #F6F6F6;
-  margin: 30px;
+  margin: 0px 30px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.67px;
  
 p {
     transition: 0.4s;

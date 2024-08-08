@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import Collapse from '../components/Collapse';
+import "../style/About.scss";
 
 
 function About() {

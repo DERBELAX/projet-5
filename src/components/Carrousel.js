@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef} from 'react';
 import rightArrow from '../assets/arrow/arrow-right.png';
 import leftArrow from '../assets/arrow/arrow-left.png';
+import "../style/Carrousel.scss";
 
 function Carrousel({ pictures }) {
   const [currentPicture, setCurrentPicture] = useState(0);
@@ -33,32 +34,28 @@ function Carrousel({ pictures }) {
 
   return (
     <div className="carrousel-container" ref={carrouselRef}>
-      <div className="carrousel-title">
-        {pictures.length > 1 && (
-          <>
-            <button
-              aria-label="Image précédente"
-              onClick={() => changePicture('previous')}
-            >
-              <img
-                src={leftArrow}
-                className="arrow-img"
-                alt="Image précédente"
-              />
-            </button>
-            <button
-              aria-label="Image suivante"
-              onClick={() => changePicture('next')}
-            >
-              <img
-                src={rightArrow}
-                className="arrow-img"
-                alt="Image suivante"
-              />
-            </button>
-          </>
-        )}
-      </div>
+      {pictures.length > 1 && (
+        <>
+          <div
+            className="arrow arrow-left"
+            onClick={() => changePicture('previous')}
+          >
+            <img
+              src={rightArrow}
+              alt="Image précédente"
+            />
+          </div>
+          <div
+            className="arrow arrow-right"
+            onClick={() => changePicture('next')}
+          >
+            <img
+              src={leftArrow}
+              alt="Image suivante"
+            />
+          </div>
+        </>
+      )}
       <div className="carrousel-content">
         <img
           src={pictures[currentPicture]}
@@ -76,5 +73,6 @@ function Carrousel({ pictures }) {
 }
 
 export default Carrousel;
+
 
 

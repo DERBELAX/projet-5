@@ -14,7 +14,7 @@ function Collapse({ collapseTitle, children }) {
     <div className="collapse-container">
       <div className="collapse-title" onClick={toggle}>
         {collapseTitle}
-        <button
+        <button className="button"
           aria-expanded={open ? "true" : "false"}
           aria-controls="collapse-parent"
           aria-label="open this collapse"
