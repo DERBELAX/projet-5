@@ -5,10 +5,7 @@ function Tag({tag}) {
     return(
         <div className="teg-ul">
             <ul>
-                
-                    <li>{tag}</li>
-                
-
+                <li>{tag}</li>
             </ul> 
         </div>
 

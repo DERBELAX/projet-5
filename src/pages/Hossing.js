@@ -6,73 +6,77 @@ import Collapse from '../components/Collapse';
 import Carrousel from '../components/Carrousel';
 import HousingData from '../Data/logements.json';
 
+
 const Housing = () => {
-    const { id } = useParams();
-    const navigate = useNavigate();
+  const { id } = useParams();
+  const navigate = useNavigate();
 
-    const data = HousingData.find(data => data.id === id);
+  const data = HousingData.find((data) => data.id === id);
 
-    useEffect(() => {
-        if (!data) {
-            navigate("/*");
-        }
-    }, [data, navigate]);
-
+  useEffect(() => {
     if (!data) {
-        return <div>Loading...</div>; 
+      navigate("/*");
     }
-    return (
-        <>
-            <Carrousel pictures={data.pictures} />
+  }, [data, navigate]);
 
-            <div className="details">
-                <div className="tag-title">
-                    <div className="title">
-                        <h1>{data.title}</h1>
-                        <h2>{data.location}</h2>
-                    </div>
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
-                    <div className="tag-container">
-                        {data.tags.map(tag => <Tag key={`${data.id}-${tag}`} tag={tag} />)}
-                    </div>
-                </div>
+  return (
+    <>
+      <Carrousel pictures={data.pictures} />
 
-                <div className="stars-name">
-                    <div className="host-name-picture">
-                        <p className="host-name">{data.host.name}</p>
-                        <img className="host-picture" src={data.host.picture} alt={data.host.name}/>
-                    </div>
+      <div className="details">
+        <div className="tag-title">
+          <div className="title">
+            <h1>{data.title}</h1>
+            <h2>{data.location}</h2>
+          </div>
 
-                    <div className="rating">
-                        <Rating rating={data.rating} className="rating-star" />
-                    </div>
-                </div>
-            </div>
-                
-                
-            <div className="collapse-housing">
-                <div className="description-housing">
-                    <Collapse
-                    collapseTitle={<h2 className="collapse-title">Description</h2>}
-                    collapseDescription={<p className="collapse-description">{data.description}</p>} 
-                    />
-                </div>
-                    
-                <div className="equipments-housing">
-                    <Collapse 
-                    collapseTitle={<h2 className="collapse-title">Equipements</h2>}
-                    collapseDescription={
-                        <ul className="list-equipement">
-                            {data.equipments.map((equipments, index) => (
-                            <li key={`${index}-${equipments}`} className="equipements">{equipments}</li>
-                        ))}
-                        </ul>
-                        }
-                    />
-                </div>
-            </div>
-        </>
-    );
-}
+          <div className="tag-container">
+            {data.tags.map((tag) => (
+              <Tag key={`${data.id}-${tag}`} tag={tag} />
+            ))}
+          </div>
+        </div>
+
+        <div className="stars-name">
+          <div className="host-name-picture">
+            <p className="host-name">{data.host.name}</p>
+            <img
+              className="host-picture"
+              src={data.host.picture}
+              alt={data.host.name}
+            />
+          </div>
+
+          <div className="rating">
+            <Rating rating={data.rating} className="rating-star" />
+          </div>
+        </div>
+      </div>
+
+      <div className="collapse-housing">
+        <div className="description-housing">
+          <Collapse collapseTitle={<h2>Description</h2>}>
+            <p>{data.description}</p>
+          </Collapse>
+        </div>
+
+        <div className="equipments-housing">
+          <Collapse collapseTitle={<h2>Equipements</h2>}>
+            <ul>
+              {data.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          </Collapse>
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Housing;
+
