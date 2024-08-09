@@ -1,7 +1,7 @@
 .details, .tag-container {
     display: flex;
     justify-content: space-between;
-    margin: 0px 30px;
+  
   }
   @media screen and (max-width: 768px) {
     .cols {
@@ -58,7 +58,10 @@
   }
   
   .rating {
+    margin-right: 30px;
     text-align: end;
+    display: flex;
+    align-items: center;
   }
   
   .collapse-housing {
@@ -92,4 +95,8 @@
       min-height: auto;
     }
   }
-  
+
+
+
+
+
