@@ -8,19 +8,17 @@
 }
 .carrousel-container{
     width: 100%;
-    height: 450px;
      display: flex;
      align-items:center;
+     padding: 0 30px;
    
 }
    
 .carrousel-image{
-    position: absolute;
     border-radius: 25px;
     width: 100%;
     height: 100%;
     object-fit: cover;  
-      top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,27 +27,25 @@
 
 .arrow-left{
   position: absolute;
-  top: 40%;
   z-index: 1;
 }
 .arrow-right{
     position: absolute;
-    top: 40%;
-    right: 5%;
+    right: 2%;
     z-index: 1;
    
 }
 .numbers {
     position: absolute;
-    margin-top: 27%;
-    left: 50%;
+    bottom: 8px;
     transform: translateX(-50%);
     color: white;
+    left: 50%;
+    padding: 5px 10px;
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 500;
     line-height: 25.67px;
-   
 
 }
 

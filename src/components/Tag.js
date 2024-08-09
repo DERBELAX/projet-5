@@ -3,10 +3,10 @@ import "../style/Tag.scss";
 function Tag({tag}) {
     console.log(tag)
     return(
-        <div className="teg-ul">
-            <ul>
-                <li>{tag}</li>
-            </ul> 
+        <div className="tag-ul">
+            
+                {tag}
+        
         </div>
 
     )

@@ -29,18 +29,9 @@ const Housing = () => {
 
       <div className="details">
         <div className="tag-title">
-          <div className="title">
             <h1>{data.title}</h1>
             <h2>{data.location}</h2>
-          </div>
-
-          <div className="tag-container">
-            {data.tags.map((tag) => (
-              <Tag key={`${data.id}-${tag}`} tag={tag} />
-            ))}
-          </div>
         </div>
-
         <div className="stars-name">
           <div className="host-name-picture">
             <p className="host-name">{data.host.name}</p>
@@ -49,14 +40,21 @@ const Housing = () => {
               src={data.host.picture}
               alt={data.host.name}
             />
-          </div>
+          </div>  
+      </div>
+      </div>
 
+      <div className="tag-container">
+        <div className='tag'>
+        {data.tags.map((tag) => (
+              <Tag key={`${data.id}-${tag}`} tag={tag} />
+            ))}
+
+        </div>
           <div className="rating">
             <Rating rating={data.rating} className="rating-star" />
           </div>
         </div>
-      </div>
-
       <div className="collapse-housing">
         <div className="description-housing">
           <Collapse collapseTitle={<h2>Description</h2>}>

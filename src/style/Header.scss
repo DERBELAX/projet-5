@@ -3,9 +3,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 40px ;
+    width: 100%;
+    padding: 30px ;
     @media (max-width: 768px) {
       padding: 10px;
+    }
+    .nav-header{
+      display: flex;
+      padding: 30px;
     }
     img {
       width: 130px;

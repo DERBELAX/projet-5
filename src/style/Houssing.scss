@@ -1,0 +1,95 @@
+.details, .tag-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 30px;
+  }
+  @media screen and (max-width: 768px) {
+    .cols {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  
+  .stars-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @media (max-width: 768px) {
+      order: 2;
+    }
+  }
+  
+  .tag {
+    display: flex;
+    gap: 30px;
+    margin-left: 30px;
+  
+  }
+  
+  .description-housing {
+    display: flex;
+    gap: 73px;
+    width: 550px;
+  }
+  
+  .host-name-picture {
+    display: flex;
+  }
+  
+  .host-name {
+    text-align: right;
+    margin-right: 5px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    color: #FF6060;
+  }
+  
+  .host-picture {
+    margin-left: 5px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    @media (max-width: 768px) {
+      height: 32px;
+      width: 32px;
+    }
+  }
+  
+  .rating {
+    text-align: end;
+  }
+  
+  .collapse-housing {
+    display: flex;
+    margin: 30px 0px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }
+  }
+  
+  .description-housing, .equipments-housing {
+    flex: 1;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        padding-left: 10px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      width: 100%;
+      min-height: auto;
+    }
+  }
+  
