@@ -11,8 +11,9 @@
   padding: 10px 20px 10px 15px;
   justify-content: space-between;
 
-  @media (max-width: 769px) {
+  @media (max-width: 768px) {
     padding: 5px 10px 5px 10px;
+    font-size: 13px;
   }
 
   p {
@@ -25,7 +26,7 @@
     object-fit: contain;
     transition: 0.5s;
 
-    @media (max-width: 769px) {
+    @media (max-width: 768px) {
       width: 16px;
     }
 
