@@ -1,15 +1,4 @@
-.details{
-    padding: 30px;
-}
-.tag-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    @media (max-width: 768px) {
-        
-        font-size: 10px;
-}
-}
+
 .tag-ul {
     color: white;
     width:115px;  
@@ -22,22 +11,10 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    
-  
+    @media (max-width: 768px) {
+        font-size: 10px;
+        min-width: 0px;
+        padding: 1px 15px 1px 15px;
+        border-radius: 5px; 
 }
-
-h1{
-    font-family: Montserrat;
-    font-size: 36px;
-    font-weight: 500;
-    color: #FF6060;
-
-}
-h2{
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25.67px;
-    text-align: left;
-
 }

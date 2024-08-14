@@ -7,11 +7,13 @@
       } 
 }
 .carrousel-container{
-    width: 100%;
      display: flex;
      align-items:center;
      padding: 0 30px;
-   
+   @media (max-width:768px) 
+   {width: 100%;
+    
+   }
 }
    
 .carrousel-image{
@@ -23,6 +25,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; 
+    @media (max-width:768px) 
+   {width: 100%;
+    
+   }
 }
 
 .arrow-left{
