@@ -11,7 +11,7 @@
      align-items:center;
      padding: 0 30px;
    @media (max-width:768px) 
-   {width: 100%;
+   {
     
    }
 }
@@ -25,21 +25,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    @media (max-width:768px) 
-   {width: 100%;
-    
-   }
+}
+.arrow img{
+  justify-content: center;
+  
+  @media (max-width:768px) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .arrow-left{
   position: absolute;
   z-index: 1;
+ 
 }
 .arrow-right{
     position: absolute;
-    right: 2%;
-    z-index: 1;
-   
+    right: 7%;
+    z-index: 1;  
 }
 .numbers {
     position: absolute;

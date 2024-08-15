@@ -1,7 +1,7 @@
 import React from "react";
 import starRed from "../assets/Red-Star.png";
 import starGrey from "../assets/Grey-Star.png"
-import "../style/Rating.scss"
+
 
 
 // Fonction Stars qui affiche des étoiles en fonction de la note

@@ -25,14 +25,18 @@ const Housing = () => {
 
   return (
     <>
-      <Carrousel pictures={data.pictures} />
-
-      <div className="details">
-        <div className="tag-title">
+    <Carrousel pictures={data.pictures} />
+    <section className='details'>
+      <div className='details-header'>
+      <div className="tag-title">
             <h1>{data.title}</h1>
             <h2>{data.location}</h2>
-        </div>
-        <div className="stars-name">
+            <ul className='tag'>
+               {data.tags.map((tag) => (
+              <Tag key={`${data.id}-${tag}`} tag={tag} />))}
+            </ul>
+       </div>
+       <div className="stars-name">
           <div className="host-name-picture">
             <p className="host-name">{data.host.name}</p>
             <img
@@ -41,21 +45,12 @@ const Housing = () => {
               alt={data.host.name}
             />
           </div>  
-      </div>
-      </div>
-
-      <div className="tag-container">
-        <div className='tag'>
-        {data.tags.map((tag) => (
-              <Tag key={`${data.id}-${tag}`} tag={tag} />
-            ))}
-
-        </div>
           <div className="rating">
             <Rating rating={data.rating} className="rating-star" />
-          </div>
-        </div>
-      <div className="collapse-housing">
+            </div>
+      </div>
+     </div> 
+    <div className="collapse-housing">
         <div className="description-housing">
           <Collapse collapseTitle={<h2>Description</h2>}>
             <p>{data.description}</p>
@@ -72,6 +67,7 @@ const Housing = () => {
           </Collapse>
         </div>
       </div>
+     </section>
     </>
   );
 };

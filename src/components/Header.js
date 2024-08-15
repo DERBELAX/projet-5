@@ -7,10 +7,10 @@ import "../style/Header.scss";
 function Header() {
     return (
         <div className='header'>
-        <img src={Logo} alt='Logo Kasa'/>
+        <img src={Logo} alt='Logo Kasa' className='logo'/>
         <nav className='nav-header'>
-            <ul>
-                <li>
+            <ul >
+                <li >
                 <NavLink to="/Home">Accueil</NavLink>
                 </li>
                 <li><NavLink to="/About">A Propos </NavLink></li>
