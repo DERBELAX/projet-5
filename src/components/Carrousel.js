@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
-import rightArrow from '../assets/arrow/arrow-right.png';
-import leftArrow from '../assets/arrow/arrow-left.png';
+import Left from '../assets/arrow/arrow-left.svg';
+import Right from '../assets/arrow/arrow-right.svg';
 import "../style/Carrousel.scss";
 
 function Carrousel({ pictures }) {
@@ -29,20 +29,20 @@ function Carrousel({ pictures }) {
       {pictures.length > 1 && (
         <>
           <div
-            className="arrow arrow-left"
+            className="arrow-left"
             onClick={() => changePicture('previous')}
           >
             <img
-              src={rightArrow}
+              src={Left}
               alt="Image précédente"
             />
           </div>
           <div
-            className="arrow arrow-right"
+            className="arrow-right"
             onClick={() => changePicture('next')}
           >
             <img
-              src={leftArrow}
+              src={Right}
               alt="Image suivante"
             />
           </div>
