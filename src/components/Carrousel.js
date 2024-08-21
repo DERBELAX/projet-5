@@ -5,8 +5,7 @@ import "../style/Carrousel.scss";
 
 function Carrousel({ pictures }) {
   const [currentPicture, setCurrentPicture] = useState(0);
-  ;
-
+  
   const changePicture = (direction) => {
     if (direction === 'next') {
       if(currentPicture === pictures.length -1){

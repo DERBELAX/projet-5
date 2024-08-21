@@ -10,6 +10,10 @@
      display: flex;
      align-items:center;
      padding: 0 30px;
+     @media (max-width: 768px) {
+    padding: 0 20px;
+     }
+   
 }
    
 .carrousel-image{
@@ -55,6 +59,11 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 25.67px;
+    @media (max-width: 768px) {
+      display: none;
+    
+    }
+  
 
 }
 
