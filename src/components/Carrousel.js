@@ -3,22 +3,28 @@ import Left from '../assets/arrow/arrow-left.svg';
 import Right from '../assets/arrow/arrow-right.svg';
 import "../style/Carrousel.scss";
 
+// Le composant Carrousel prend une liste d'images (pictures) en tant que prop
 function Carrousel({ pictures }) {
-  const [currentPicture, setCurrentPicture] = useState(0);
+  const [currentPicture, setCurrentPicture] = useState(0); // Utilisation du hook useState pour gérer l'image actuellement affichée
   
+  // Fonction pour changer l'image affichée selon la direction (next ou previous)
   const changePicture = (direction) => {
     if (direction === 'next') {
+      // Si on est à la dernière image, revenir à la première
       if(currentPicture === pictures.length -1){
         setCurrentPicture(0)
       } else {
+        // Passer à l'image suivante
         setCurrentPicture(currentPicture+1)
       }
    
     } else if (direction === 'previous') {
+       // Si on est à la première image, aller à la dernière
       if(currentPicture === 0)
         {
         setCurrentPicture(pictures.length -1)
       } else {
+        // Revenir à l'image précédente
         setCurrentPicture(currentPicture -1)
       }
     }

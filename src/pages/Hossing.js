@@ -8,29 +8,34 @@ import HousingData from '../Data/logements.json';
 import "../style/Houssing.scss";
 
 const Housing = () => {
-  const { id } = useParams();
-  const navigate = useNavigate();
+  const { id } = useParams(); // Récupération de l'identifiant du logement 
+  const navigate = useNavigate(); // Hook pour la navigation programmatique
 
+  // Recherche des données du logement correspondant à l'ID spécifié
   const data = HousingData.find((data) => data.id === id);
-
+    // Utilisation de useEffect pour gérer la redirection si aucune donnée n'est trouvée
   useEffect(() => {
     if (!data) {
-      navigate("/*");
+      navigate("/*"); // Redirection vers la page d'erreur si le logement n'est pas trouvé
     }
   }, [data, navigate]);
 
   if (!data) {
+     // Si les données ne sont pas encore disponibles, afficher un message de chargement
     return <div>Loading...</div>;
   }
 
   return (
     <>
+     {/* Composant Carrousel pour afficher les images du logement */}
     <Carrousel pictures={data.pictures} />
     <section className='details'>
       <div className='details-header'>
       <div className="tag-title">
+           {/* Titre et localisation du logement */}
             <h1>{data.title}</h1>
             <h2>{data.location}</h2>
+             {/* Affichage des tags associés au logement */}
             <ul className='tag'>
                {data.tags.map((tag) => (
               <Tag key={`${data.id}-${tag}`} tag={tag} />))}
@@ -38,6 +43,7 @@ const Housing = () => {
        </div>
        <div className="stars-name">
           <div className="host-name-picture">
+              {/* Nom et photo de l'hôte */}
             <p className="host-name">{data.host.name}</p>
             <img
               className="host-picture"
@@ -45,6 +51,7 @@ const Housing = () => {
               alt={data.host.name}
             />
           </div>  
+             {/* Composant Rating pour afficher la note du logement */}
           <div className="rating">
             <Rating rating={data.rating} className="rating-star" />
             </div>

@@ -16,5 +16,5 @@ export default function Stars({rating}) {
         stars.push(<img src={ratingStar} alt='rating' key={i} className="rating-star" />);
     }
 
-    return stars; // Retourner le tableau des étoiles à afficher
+    return stars; 
 }
