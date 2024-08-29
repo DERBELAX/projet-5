@@ -4,8 +4,10 @@ import "../style/Collapse.scss";
 
 // Le composant Collapse prend un titre (collapseTitle) et un contenu (children) en tant que props
 function Collapse({ collapseTitle, children }) {
+
   // Utilisation du hook useState pour gérer l'état "open" qui indique si le contenu est visible ou non
   const [open, setOpen] = useState(false); 
+
   // Fonction pour basculer l'état "open" lorsqu'on clique sur le titre
   const toggle = () => {
     setOpen(!open);
@@ -15,8 +17,11 @@ function Collapse({ collapseTitle, children }) {
 
   return (
     <div className="collapse-container">
+        {/* Titre du collapse qui déclenche l'ouverture ou la fermeture */}
       <div className="collapse-title" onClick={toggle}>
-        {collapseTitle}
+
+        {collapseTitle} {/* Affiche le titre passé en tant que prop */}
+        
         <button className="button"
           aria-expanded={open ? "true" : "false"} // Attribut ARIA pour indiquer l'état du collapse
           aria-controls="collapse-parent" // Attribut ARIA pour indiquer l'élément contrôlé

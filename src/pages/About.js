@@ -7,6 +7,7 @@ import "../style/About.scss";
 function About() {
   return (
     <>
+    {/* Composant Banner configuré pour la page "À propos" */}
         <Banner page = 'about' />
       <div className="about-container">
         < Collapse collapseTitle={'Fiabilité'}>

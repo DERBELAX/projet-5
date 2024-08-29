@@ -27,6 +27,7 @@ const Banner = ({page}) => {
 
   return (
       <section className={className}>
+          {/* Conteneur pour l'image de la bannière */}
           <div className="banner-container">
               <img src={imageSrc} className='banner-image' alt={imageAlt} title={imageAlt} />
           </div>

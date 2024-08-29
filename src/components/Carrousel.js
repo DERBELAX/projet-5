@@ -5,7 +5,8 @@ import "../style/Carrousel.scss";
 
 // Le composant Carrousel prend une liste d'images (pictures) en tant que prop
 function Carrousel({ pictures }) {
-  const [currentPicture, setCurrentPicture] = useState(0); // Utilisation du hook useState pour gérer l'image actuellement affichée
+  // Utilisation du hook useState pour gérer l'image actuellement affichée
+  const [currentPicture, setCurrentPicture] = useState(0); 
   
   // Fonction pour changer l'image affichée selon la direction (next ou previous)
   const changePicture = (direction) => {
@@ -59,6 +60,8 @@ function Carrousel({ pictures }) {
           alt={`Image ${currentPicture + 1} sur ${pictures.length}`}
           className="carrousel-image"
         />
+
+        {/* Affichage du compteur d'images uniquement si plus d'une image est présente */}
         {pictures.length > 1 && (
           <p className="numbers">
             {currentPicture + 1}/{pictures.length}
