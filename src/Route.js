@@ -9,7 +9,7 @@ function Router () {
    <main>
     
       <Routes>
-      <Route path='/' element={<Home />} />  {/* Default route */}
+        <Route path='/' element={<Home />} />  {/* Default route */}
         <Route path='/home' element={<Home/>} ></Route> 
         <Route path='/about' element={<About/>} ></Route>
         <Route path='/houssing/:id' element={<Houssing/>}></Route>

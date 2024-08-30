@@ -30,15 +30,17 @@ function Collapse({ collapseTitle, children }) {
           <img
             src={Arrow}
             className={`Arrow ${open ? "down" : ""}`} // Applique la classe "down" si le collapse est ouvert
-            alt="Ouvrir l'article"  // Texte alternatif pour l'image
+            alt="Ouvrir l'article"  
           />
         </button>
       </div>
 
       <div
         id="collapse-parent"
-        className={open ? "collapse-parent show" : "collapse-parent hide"} // Affiche ou masque le contenu selon l'état "open"
-        ref={contentRef} // Référence à l'élément DOM pour calculer dynamiquement la hauteur
+        // Affiche ou masque le contenu selon l'état "open"
+        className={open ? "collapse-parent show" : "collapse-parent hide"} 
+        // Référence à l'élément DOM pour calculer dynamiquement la hauteur
+        ref={contentRef} 
         style={
           open
             ? { height: contentRef.current.scrollHeight + "px" } // Si ouvert, définit la hauteur selon le contenu

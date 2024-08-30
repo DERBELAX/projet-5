@@ -6,8 +6,8 @@ function Home(){
         <>
        {/* Composant Banner configuré pour la page d'accueil */}
        <Banner page='home' /> 
-       
-       {/* Composant Card pour afficher les différentes cartes de logements ou autres éléments */}
+
+       {/* Composant Card pour afficher les différentes cartes de logements*/}
        <Card/>
         </>
     )
